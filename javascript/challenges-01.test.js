@@ -129,7 +129,7 @@ availableItems.forEach((element) => {
   };
 
 });
-  return groceries  
+  return groceries        
   // Solution code here...
 };
 

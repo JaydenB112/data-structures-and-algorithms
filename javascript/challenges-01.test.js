@@ -70,7 +70,7 @@ const speaker = (words, callback) => {
  words.forEach(words => {
   newWords.push(callback(words));
  })
- return newWords
+ return newWords    
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,11 +89,17 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr, value) => {
-  // Solution code here...
+const addValues = (arr, value) => {  
+ arr.push(value) 
+  
 };
 
 const addNumbers = (num, arr, times, callback) => {
+  for(let i = 0; i< times; i++){
+    callback(arr,num)
+  }
+  return arr;
+  
   // Solution code here...
 };
 
@@ -116,6 +122,14 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
+  let groceries = [];
+availableItems.forEach((element) => {
+  if (element.available === true){
+    groceries.push(element.name)
+  };
+
+});
+  return groceries  
   // Solution code here...
 };
 

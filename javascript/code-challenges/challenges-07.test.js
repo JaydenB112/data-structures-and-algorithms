@@ -26,7 +26,8 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-  return starWarsArr.sort(starWarsPeople.height);
+  starWarsArr.sort((a, b) => b.height - a.height);
+  return starWarsArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,9 +148,9 @@ const listFoods = (recipe) => {
     const words = ingredient.split(" ");
     const name = words.slice(2).join(" ");
     result.push(name);
-    return result;
 
   });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------

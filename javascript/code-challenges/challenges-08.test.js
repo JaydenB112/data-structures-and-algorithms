@@ -101,8 +101,16 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-};
+  if (typeof input !== 'string' && typeof input !== 'number') {
+    return false;
+  }
 
+  const pattern = /\d/;
+  return pattern.test(input.toString());
+  const regex = /\d/;
+  return regex.test(input);
+
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -112,6 +120,7 @@ Write a function named containsWorld that takes in a string or number of any len
 
 const containsWorld = (input) => {
   // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
